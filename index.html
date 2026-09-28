@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Losiar's Clock's</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="shortcut icon" href="img/2789228.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <button class="menu-toggle" onclick="toggleSidebar()" title="Меню" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="logo">
+            <span class="logo-mark">⏱</span>
+            <span class="logo-text">The Losiar's Clock's</span>
+        </div>
+        <div class="header-time" id="header-time">--:--:--</div>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="clock-widget">
+            <div class="clock-face">
+                <div class="clock-ticks">
+                    <span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span>
+                </div>
+                <div class="clock-hand hour-hand" id="hour-hand"></div>
+                <div class="clock-hand minute-hand" id="minute-hand"></div>
+                <div class="clock-hand second-hand" id="second-hand"></div>
+                <div class="clock-center"></div>
+            </div>
+            <div class="clock-label">Москва · MSK</div>
+            <div class="clock-digital" id="clock-digital">--:--:--</div>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <nav class="sidebar-nav">
+            <a href="#" class="sidebar-link active" data-page="home">
+                <span class="icon">⌂</span>
+                <span class="text">Главная</span>
+            </a>
+            <a href="#" class="sidebar-link" data-page="dashboard">
+                <span class="icon">◈</span>
+                <span class="text">Галерея часов</span>
+            </a>
+            <a href="#" class="sidebar-link" data-page="messages">
+                <span class="icon">✉</span>
+                <span class="text">Обратная связь</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="sidebar-footer-line"></div>
+            <p>Мастерская Losiar'а</p>
+            <span>© 2026</span>
+        </div>
+    </aside>
+
+    <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <main class="content">
+
+        <section class="page active" id="page-home">
+            <div class="page-header">
+                <h1 class="hejump">Главная</h1>
+                <div class="page-subtitle">История одного мастера</div>
+            </div>
+
+            <div class="card">
+                <p class="lead"><i>В этом разделе находится история создания Losiar'ом своих часов — как он начал это делать, как пришёл к этому и прочее.</i></p>
+
+                <p><b>Losiar</b> (он же Игорь, или, как удобнее читателям данного сайта, просто <b>Часовщик</b>) — это человек, который начал заниматься часовым делом довольно давно и уже успел превратить это увлечение в настоящее искусство.</p>
+
+                <p>У него есть собственная мастерская по изготовлению часов, где собрана внушительная коллекция профессиональных инструментов. Всё это позволяет ему создавать механизмы высокой точности. Свою деятельность Игорь активно освещает в социальных сетях (подробнее об этом — на вкладке «Обратная связь»).</p>
+
+                <p>Кроме того, у мастера имеется галерея часов (подробнее — на вкладке «Галерея часов»). Там представлены как актуальные, так и архивные модели его авторства. Многое из своих творений он уже продал, многое подарил близким и друзьям. Работает он с разными видами древесины, и, стоит отметить, его часовое дело идёт на ура!</p>
+
+                <p class="quote">«Глядя на его работы, понимаешь, что время — это не просто стрелки на циферблате, а материя, которую можно ощутить в руках. В каждой модели чувствуется душа, терпение и любовь к деталям.»</p>
+            </div>
+
+            <div class="stats">
+                <div class="stat"><span class="stat-num" data-target="33">0</span><span class="stat-label">моделей в галерее</span></div>
+                <div class="stat"><span class="stat-num" data-target="5">0</span><span class="stat-label">лет опыта</span></div>
+                <div class="stat"><span class="stat-num" data-target="100">0</span><span class="stat-label">% ручная работа</span></div>
+            </div>
+        </section>
+
+        <section class="page" id="page-dashboard">
+            <div class="page-header">
+                <h1>Галерея часов</h1>
+                <div class="page-subtitle"><i>Здесь находятся абсолютно все макеты часов, многие заготовки и прочее</i></div>
+            </div>
+            <hr class="custom-hr">
+            <div class="gallery" id="gallery">
+                <img src="img/clock1.jpg"  alt="1"  loading="lazy">
+                <img src="img/clock2.jpg"  alt="2"  loading="lazy">
+                <img src="img/clock3.jpg"  alt="3"  loading="lazy">
+                <img src="img/clock4.jpg"  alt="4"  loading="lazy">
+                <img src="img/clock5.jpg"  alt="5"  loading="lazy">
+                <img src="img/clock6.jpg"  alt="6"  loading="lazy">
+                <img src="img/clock7.jpg"  alt="7"  loading="lazy">
+                <img src="img/clock8.jpg"  alt="8"  loading="lazy">
+                <img src="img/clock9.jpg"  alt="9"  loading="lazy">
+                <img src="img/clock11.jpg" alt="11" loading="lazy">
+                <img src="img/clock12.jpg" alt="12" loading="lazy">
+                <img src="img/clock13.jpg" alt="13" loading="lazy">
+                <img src="img/clock14.jpg" alt="14" loading="lazy">
+                <img src="img/clock15.jpg" alt="15" loading="lazy">
+                <img src="img/clock16.jpg" alt="16" loading="lazy">
+                <img src="img/clock17.jpg" alt="17" loading="lazy">
+                <img src="img/clock18.jpg" alt="18" loading="lazy">
+                <img src="img/clock19.jpg" alt="19" loading="lazy">
+                <img src="img/clock20.jpg" alt="21" loading="lazy">
+                <img src="img/clock21.jpg" alt="22" loading="lazy">
+                <img src="img/clock22.jpg" alt="23" loading="lazy">
+                <img src="img/clock23.jpg" alt="24" loading="lazy">
+                <img src="img/clock24.jpg" alt="25" loading="lazy">
+                <img src="img/clock25.jpg" alt="26" loading="lazy">
+                <img src="img/clock26.jpg" alt="27" loading="lazy">
+                <img src="img/clock27.jpg" alt="28" loading="lazy">
+                <img src="img/clock28.jpg" alt="29" loading="lazy">
+                <img src="img/clock29.jpg" alt="30" loading="lazy">
+                <img src="img/clock30.jpg" alt="31" loading="lazy">
+                <img src="img/clock31.jpg" alt="32" loading="lazy">
+                <img src="img/clock32.jpg" alt="33" loading="lazy">
+                <img src="img/clock33.jpg" alt="34" loading="lazy">
+            </div>
+            <hr class="custom-hr">
+            <p class="copyright"><b>2026 год — dzhamshuttt</b></p>
+        </section>
+
+        <section class="page" id="page-messages">
+            <div class="page-header">
+                <h1>Обратная связь</h1>
+                <div class="page-subtitle">На этой странице вы можете узнать или связаться как с разработчиком сайта, так и с создателем большинства часов — Losiar'ом</div>
+            </div>
+            <hr class="custom-hr">
+
+            <div class="contact-card">
+                <div class="contact-avatar">
+                    <img src="img/KGVDnU8CRG9p3qV8DwRPWPTKuLT4fV3Uddem9kJFE2DXkOI1_IaKfsXePuCJelJWTuUQYz4BL8KxO1a57hcMCPGc.png" alt="Losiar">
+                </div>
+                <div class="contact-info">
+                    <h2>Losiar</h2>
+                    <p class="role">Мастер-часовщик</p>
+                    <div class="contact-links">
+                        <a href="https://vk.ru/id307402227" target="_blank" rel="noopener">Вконтакте</a>
+                        <a href="https://www.avito.ru/user/680d407f39bf97721b6842c9e3714844/profile?src=sharing" target="_blank" rel="noopener">Авито</a>
+                        <a href="https://t.me/losiar1" target="_blank" rel="noopener">Телеграм</a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="custom-hr">
+
+            <div class="contact-card">
+                <div class="contact-avatar">
+                    <img src="img/free-icon-question-sign-25333.png" alt="Dzhamshuttt">
+                </div>
+                <div class="contact-info">
+                    <h2>Dzhamshuttt</h2>
+                    <p class="role">Разработчик сайта</p>
+                    <div class="contact-links">
+                        <a href="https://t.me/dzhamshutt" target="_blank" rel="noopener">Телеграм</a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="custom-hr">
+        </section>
+
+    </main>
+
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">×</span>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+</body>
+</html>
