@@ -182,15 +182,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    /* звуки тика епта не работают
     
-    
-    const tick = new Audio('tick.mp3');
-    setInterval(() => {
-        tick.currentTime = 0;
-        tick.volume = 0.05;
-        tick.play().catch(() => {});
-    }, 1000);
-    */
 
 });
